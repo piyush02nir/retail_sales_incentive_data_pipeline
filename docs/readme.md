@@ -1,15 +1,16 @@
-Welcome to the show. This endeavor aims to provide you with insights into the functioning of projects within a real-time environment.
+# Retail Sales & Incentive Data Pipeline
 
-The code has been meticulously crafted with careful consideration for various aspects. It not only nurtures your coding skills but also imparts a comprehensive comprehension of project structures.
+This project aims to simulate a real-time retail sales data pipeline that calculates employee incentives based on their sales performance. The code is designed to handle large volumes of data by leveraging **Apache Spark** for distributed processing and **AWS S3** for cloud storage, ensuring scalability and efficiency. Through this project, you'll gain hands-on experience in building a data pipeline, managing real-time data, and handling partitioned data in Spark.
 
-Let's Start with requirement to complete the projects:-
-1. You should have laptop with minimum 4 GB of RAM, i3 and above (Better to have 8GB with i5).
-2. Local setup of spark. This is tricky so keep all things intact to work it properly.Download python 3.10.11 instead of python3.6 or python3.9 Use this link for clean setup :- https://youtu.be/4p7gX4DBLyc
-3. PyCharm installed in the system. How to install:- https://youtu.be/pPYjX-9JAQY
-4. MySQL workbench should also be installed to the system. How to install:- https://youtu.be/JEbTIXd61kc
-5. GitHub account is good to have but not necessary.
-5. You should have AWS account. How to create:- https://youtu.be/k7522oZQi9Y
-6. Understanding of spark,sql and python is required.
+## Key Features:
+- Real-time data processing with Spark.
+- Integration with AWS S3 for data storage and retrieval.
+- Partitioned data handling to efficiently manage large datasets.
+- Comprehensive incentive calculation system based on employee sales performance.
+
+---
+
+## Entity Relationship Diagram (ERD)
 
 ```plaintext
 Project structure:-
@@ -65,21 +66,51 @@ my_project/
 │   │    └── generate_csv_data.py
 ```
 
-How to run the program in Pycharm:-
-1. Open the pycharm editor.
-2. Upload or pull the project from GitHub.
-3. Open terminal from bottom pane.
-4. Goto virtual environment and activate it. Let's say you have venv as virtual environament.i) cd venv ii) cd Scripts iii) activate (if activate doesn't work then use ./activate)
-5. Create main.py as explained in my videos on YouTube channel.
-6. You will have to create a user on AWS also and assign s3 full access and provide secret key and access key to the config file.
-6. Run main.py from green play button on top right hand side.
-7. If everything works as expected enjoy, else re-try.
 
-Project Architecture:-
-![Architecture](C:\Users\nikita\Pictures\Screenshots\architecture.png)
+---
 
-Database ER Diagram:-
-![Architecture](C:\Users\nikita\Documents\data_engineering\pythonProject\youtube_project\docs\database_schema.drawio.png)
+## How to Run the Program in PyCharm
 
-If you get stuck, don't forget to my watch my youtube channel project playlist for better understanding of the flow.
-My youtube channel link:- https://www.youtube.com/channel/UCacvJAgrPTjSEdnZObMzpqQ
+1. **Open PyCharm**: Launch the PyCharm IDE on your system.
+2. **Clone the Project**: 
+   - Use the terminal or PyCharm’s Git integration to clone the project from GitHub:
+     ```bash
+     git clone https://github.com/piyush02nir/retail_sales_incentive_data_pipeline.git
+     ```
+3. **Set Up Virtual Environment**:
+   - Create or activate a virtual environment (if not already done):
+     ```bash
+     python -m venv venv
+     ```
+   - Activate the virtual environment:
+     ```bash
+     cd venv/Scripts
+     ./activate
+     ```
+   *(If `activate` doesn't work, try using `source activate` on UNIX-like systems.)*
+
+4. **Install Dependencies**:
+   - Install the required Python packages listed in the `requirements.txt`:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+5. **Create `main.py`**:
+   - Follow the instructions outlined in the accompanying YouTube tutorial to set up the `main.py` script, which will execute the data pipeline.
+
+6. **Configure AWS S3 Access**:
+   - Set up an AWS user with full access to S3.
+   - Add the **secret key** and **access key** to the configuration file to allow the script to read from and write to S3.
+
+7. **Run the Program**:
+   - Execute the `main.py` script using the green play button in PyCharm or by typing the following command in the terminal:
+     ```bash
+     python main.py
+     ```
+
+8. **Troubleshooting**:
+   - If the program doesn't execute as expected, review the code and ensure all configurations (AWS, PyCharm, virtual environment) are set up correctly.
+
+---
+
+Enjoy building a scalable and real-time data pipeline for retail sales and employee incentives!
